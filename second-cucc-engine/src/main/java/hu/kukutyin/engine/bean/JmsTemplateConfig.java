@@ -20,9 +20,6 @@ import org.springframework.jms.support.destination.JndiDestinationResolver;
  */
 @EnableJms
 @Configuration
-@PropertySources({
-        @PropertySource(value = "classpath:application.properties")
-})
 public class JmsTemplateConfig {
 
     @Value("${jndi.queue.to.clavis}")

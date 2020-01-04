@@ -7,16 +7,11 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.jms.support.destination.JndiDestinationResolver;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.jndi.JndiTemplate;
 
 @Configuration
-@PropertySources({
-        @PropertySource(value = "classpath:application.properties")
-})
 public class JndiConfig {
 
     @Value("${jndi.datasource.ebh}")
