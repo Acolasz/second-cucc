@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+							http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.kukutyin.second</groupId>
+		<artifactId>second-cucc</artifactId>
+		<version>${project.version}</version>
+	</parent>
+
+	<artifactId>second-cucc-app</artifactId>
+	<packaging>ear</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>hu.kukutyin.second</groupId>
+			<artifactId>second-cucc-web</artifactId>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.kukutyin.second</groupId>
+			<artifactId>second-cucc-web</artifactId>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<version>5</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<skinnyWars>true</skinnyWars>
+					<finalName>SecondCucc</finalName>
+					<modules>
+						<webModule>
+							<groupId>hu.kukutyin.second</groupId>
+							<artifactId>second-cucc-web</artifactId>
+							<contextRoot>/second-cucc</contextRoot>
+						</webModule>
+					</modules>
+					<archive>
+						<manifestEntries>
+							<WebLogic-Application-Version>${project.version}</WebLogic-Application-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
