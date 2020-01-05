@@ -13,6 +13,6 @@ public class MyRouter extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from(TEST_QUEUE).to("stream:out");
+        from(TEST_QUEUE).process("myProcessor").to("stream:out");
     }
 }
