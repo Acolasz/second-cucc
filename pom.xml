@@ -19,7 +19,7 @@
         <mybatis.spring.version>2.0.2</mybatis.spring.version>
         <mybatis.version>3.5.2</mybatis.version>
         <camel.version>3.0.0</camel.version>
-        <google.guava.version>28.1-jre</google.guava.version>
+        <google.guava.version>29.0-jre</google.guava.version>
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
         <prowidesoftware.prowide.core.version>SRU2019-8.0.1</prowidesoftware.prowide.core.version>
         <jackson.databind.version>2.10.0</jackson.databind.version>
