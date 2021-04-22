@@ -17,7 +17,7 @@
         <springframework.spring.context.support.version>4.3.25.RELEASE</springframework.spring.context.support.version>
         <aspectj.version>1.9.4</aspectj.version>
         <mybatis.spring.version>2.0.2</mybatis.spring.version>
-        <mybatis.version>3.5.2</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <camel.version>3.0.0</camel.version>
         <google.guava.version>28.1-jre</google.guava.version>
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
